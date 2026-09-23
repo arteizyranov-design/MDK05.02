@@ -21,7 +21,8 @@
     
     <?php
     $number = 42;
-    echo $number;
+    $num1 = $number * 4;
+    echo $num1;
     ?>
 </body>
 </html>
