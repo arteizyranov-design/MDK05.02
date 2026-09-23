@@ -24,5 +24,14 @@
     $num1 = $number * 4;
     echo $num1;
     ?>
+    <h3>Арифметические операции  </h3>
+    <p> + - * / ** % </p>
+    <?php
+    $a = 5;
+    $b = 10;
+    $c = 8;
+    $res = ($a+$b)*$c;
+    echo "a= $a,b=$b,c=$c,res=$res";
+        ?>
 </body>
 </html>
