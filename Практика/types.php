@@ -7,10 +7,11 @@
 </head>
 <body>
     <h1>  Типы данных php</h1>
-<h2> целые числа</h2>
+<h2> целые числа - int</h2>
 <?php 
-$number = 100;
+$number = 0x354F2C;
 echo $number 
 ?>
+<h2>  числа с плавающей точкой -float</h2>
 </body>
 </html>
