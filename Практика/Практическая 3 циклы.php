@@ -58,11 +58,11 @@ echo "Сумма чисел от 1 до $lastNumber равна: $sum"
 <?php
 $lastNumber = 6; 
 $multiplicationResult = 1; 
- 
+ echo "Число, до которого идёт последовательность =$lastNumber","<br>", "<br>";
 for ($i = 2; $i <= $lastNumber; $i = $i + 2) {
     $multiplicationResult = $multiplicationResult * $i;
 }
-echo $multiplicationResult;
+echo "Произведение всех чисел=$multiplicationResult";
 ?>
 <h2>Задача 4:</h2>
 
@@ -70,20 +70,9 @@ echo $multiplicationResult;
 
 Каждый день он увеличивал дневную норму на 10% нормы предыдущего дня. Какой суммарный путь пробежит спортсмен за n дней?</p>
 <?php
-$n = 7; 
 
-$distance = 10;      
-$total_distance = 0; 
-$day = 1; 
-while ($day <= $n) {
-    $total_distance = $total_distance + $distance; 
-    $distance = $distance + ($distance * 0.10);    
-    $day = $day + 1;                             
-}
-echo "За " . $n . " дней спортсмен пробежит " . $total_distance . " км.";
 ?>
 
 <h2>Задача 5:</h2>
 
 <p>У гусей и кроликов вместе 64 лапы. Сколько может быть кроликов и гусей (указать все сочетания)?</p>
-
