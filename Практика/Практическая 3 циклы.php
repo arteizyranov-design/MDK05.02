@@ -56,31 +56,32 @@ echo "Сумма чисел от 1 до $lastNumber равна: $sum"
 
 Найдите произведение всех чисел и сохраните результат в переменную multiplicationResult. Выведите ее на экран.</p>
 <?php
-
-$lastNumber = 10;
-$multiplicationResult = 1;
-$hasEven = false;
-
-for ($i = 1; $i <= $lastNumber; $i++) {
-    if ($i % 2 === 0) {
-        $multiplicationResult *= $i;
-        $hasEven = true;
-    }
+$lastNumber = 6; 
+$multiplicationResult = 1; 
+ 
+for ($i = 2; $i <= $lastNumber; $i = $i + 2) {
+    $multiplicationResult = $multiplicationResult * $i;
 }
-
-// Если чётных чисел в диапазоне не было (например, при n = 1), результат равен 0
-if (!$hasEven) {
-    $multiplicationResult = 0;
-}
-
 echo $multiplicationResult;
-
 ?>
 <h2>Задача 4:</h2>
 
 <p>Начав тренировки, спортсмен в первый день пробежал 10 км.
 
 Каждый день он увеличивал дневную норму на 10% нормы предыдущего дня. Какой суммарный путь пробежит спортсмен за n дней?</p>
+<?php
+$n = 7; 
+
+$distance = 10;      
+$total_distance = 0; 
+$day = 1; 
+while ($day <= $n) {
+    $total_distance = $total_distance + $distance; 
+    $distance = $distance + ($distance * 0.10);    
+    $day = $day + 1;                             
+}
+echo "За " . $n . " дней спортсмен пробежит " . $total_distance . " км.";
+?>
 
 <h2>Задача 5:</h2>
 
