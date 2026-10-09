@@ -70,6 +70,16 @@ echo "Произведение всех чисел=$multiplicationResult";
 
 Каждый день он увеличивал дневную норму на 10% нормы предыдущего дня. Какой суммарный путь пробежит спортсмен за n дней?</p>
 <?php
+$days = 7;
+$distance = 9;
+$sum = 0;
+echo "Дни = " , $days , '<br>';
+echo "Дистанция = " , $distance, '<br>';
+for ($i = 1; $i <= $days; $i++) {
+    $sum = $sum + $distance;
+    $distance = $distance * 1.1;
+}
+echo "Всего = " ,$sum;
 
 ?>
 
