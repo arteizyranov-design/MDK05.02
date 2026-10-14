@@ -97,17 +97,17 @@ switch ($month) {
 
 <form action = "" > 
     <p>ВВЕДИТЕ ЧИСЛО : </p>
-    <input name ="number" > 
+    <input name ="number8" > 
     <input type ="submit" value = "Отправить">
 
 </form>
 
 <?php
-if(isset($_GET['number'])){
-$number=$_GET['number'];
-$last_number = $number % 10; 
+if(isset($_GET['number8'])){
+$number8=$_GET['number8'];
+$last_number8 = $number8 % 10; 
 
-switch ($last_number) {
+switch ($last_number8) {
     case 0: $result = 0; break; // 0*0 = 0
     case 1: $result = 1; break; // 1*1 = 1
     case 2: $result = 4; break; // 2*2 = 4
@@ -119,9 +119,10 @@ switch ($last_number) {
     case 8: $result = 4; break; // 8*8 = 64 (заканчивается на 4)
     case 9: $result = 1; break; // 9*9 = 81 (заканчивается на 1)
 }
-}
+
 
 echo "Последняя цифра квадрата: " . $result;
+}
 ?>
 
 <h2>Задача 4:</h2>
@@ -131,13 +132,13 @@ echo "Последняя цифра квадрата: " . $result;
 
 <form action = "" > 
     <p>ВВЕДИТЕ ЧИСЛО : </p>
-    <input name ="number" > 
+    <input name ="numbe" > 
     <input type ="submit" value = "Отправить">
 
 </form>
 <?php
-if(isset($_GET['number'])){
-$k =$_GET['number'];
+if(isset($_GET['numbe'])){
+$k =$_GET['numbe'];
 $lastDigit = $k % 10;
 $lastTwoDigits = $k % 100;
 
