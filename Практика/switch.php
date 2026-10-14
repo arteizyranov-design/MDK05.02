@@ -1,6 +1,14 @@
 <h1>оператор выбора - switch</h1>
+<form action = "" > 
+    <p>ВВЕДИТЕ ЧИСЛО : </p>
+    <input name ="number" > 
+    <input type ="submit" value = "Отправить">
+
+</form>
+
 <?php
-$a=10;
+if(isset($_GET['number'])){
+$a=$_GET['number'];
 switch ($a) {
     case 1: 
         echo 'a=1';
@@ -14,7 +22,11 @@ switch ($a) {
      case 15: 
         echo 'a=15';
         break;
-        default:
+     default:
         echo 'Число не нашлось';
+    }
+}else{
+    echo 'Данные не получены';
 }
+
 ?>

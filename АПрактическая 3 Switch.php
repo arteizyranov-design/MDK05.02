@@ -76,7 +76,7 @@ switch ($month) {
 определить последнюю цифру его квадрата. 
 </p>
   <?php
-$number = 148; 
+$number = 84; 
 $last_number = $number % 10; 
 
 switch ($last_number) {
