@@ -4,8 +4,17 @@
 <p>Для каждой введенной цифры (0 — 9) вывести соответствующее ей название на английском языке (0 — zero, 1 — one, 
 2 — two,... ). 
 </p>
+
+<form action = "" > 
+    <p>ВВЕДИТЕ ЧИСЛО : </p>
+    <input name ="number" > 
+    <input type ="submit" value = "Отправить">
+
+</form>
+
 <?php
-$number = 2; 
+if(isset($_GET['number'])){
+$number=$_GET['number'];
 switch ($number) {
     case 0: echo "zero"; break;
     case 1: echo "one"; break;
@@ -19,6 +28,7 @@ switch ($number) {
     case 9: echo "nine"; break;
     default: echo "Это не цифра от 0 до 9";
 }
+}
 ?>
 
 <h2>Задача 2:</h2>
@@ -26,9 +36,17 @@ switch ($number) {
 12 (номеру месяца) выдает все приходящиеся на этот месяц праздничные дни (например, если введено число 1, то должно получиться 1 января — Новый год, 7 января — Рождество
 
 </p>
-<?php
-$month = 3; 
 
+<form action = "" > 
+    <p>ВВЕДИТЕ ЧИСЛО : </p>
+    <input name ="number" > 
+    <input type ="submit" value = "Отправить">
+
+</form>
+
+<?php
+if(isset($_GET['number'])){
+$month=$_GET['number'];
 switch ($month) {
     case 1:
         echo "1 января — Новый год, 7 января — Рождество";
@@ -69,14 +87,24 @@ switch ($month) {
     default:
         echo "Ошибка: введите число от 1 до 12";
 }
+}
 ?>
 
 <h2>Задача 3: </h2>
 <p>Написать программу, позволяющую по последней цифре числа 
 определить последнюю цифру его квадрата. 
 </p>
-  <?php
-$number = 84; 
+
+<form action = "" > 
+    <p>ВВЕДИТЕ ЧИСЛО : </p>
+    <input name ="number" > 
+    <input type ="submit" value = "Отправить">
+
+</form>
+
+<?php
+if(isset($_GET['number'])){
+$number=$_GET['number'];
 $last_number = $number % 10; 
 
 switch ($last_number) {
@@ -91,6 +119,7 @@ switch ($last_number) {
     case 8: $result = 4; break; // 8*8 = 64 (заканчивается на 4)
     case 9: $result = 1; break; // 9*9 = 81 (заканчивается на 1)
 }
+}
 
 echo "Последняя цифра квадрата: " . $result;
 ?>
@@ -100,10 +129,41 @@ echo "Последняя цифра квадрата: " . $result;
 учитывая при этом, что при некоторых значениях к слово «лет» надо заменить на слово «год» или «года». Например, 11 лет, 22 года, 51 год.
 </p>
 
-<h2>Задача 5:</h2>
-<p>Написать программу, которая бы по введенному номеру единицы измерения (1 — килограмм, 2 — миллиграмм, 3 — грамм, 4 — 
-тонна, 5 — центнер) и массе М выдавала бы соответствующее значение массы в килограммах.</p>
+<form action = "" > 
+    <p>ВВЕДИТЕ ЧИСЛО : </p>
+    <input name ="number" > 
+    <input type ="submit" value = "Отправить">
 
+</form>
+<?php
+if(isset($_GET['number'])){
+$k =$_GET['number'];
+$lastDigit = $k % 10;
+$lastTwoDigits = $k % 100;
 
-Сделайте так, чтобы все данные вводились из форм.
-В задаче 5 сделайте чекбокс с единицами измерения </p>
+switch (true) {
+    // Исключение для чисел от 11 до 14 (всегда "лет")
+    case ($lastTwoDigits >= 11 && $lastTwoDigits <= 14):
+        $word = 'лет';
+        break;
+    default:
+        switch ($lastDigit) {
+            case 1:
+                $word = 'год';
+                break;
+            case 2:
+            case 3:
+            case 4:
+                $word = 'года';
+                break;
+            default:
+                $word = 'лет';
+                break;
+        }
+        break;
+} 
+
+echo "Мне {$k} {$word}";
+}
+?>
+
