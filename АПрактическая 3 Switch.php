@@ -29,6 +29,7 @@ switch ($number) {
     default: echo "Это не цифра от 0 до 9";
 }
 }
+echo '1';
 ?>
 
 <h2>Задача 2:</h2>
