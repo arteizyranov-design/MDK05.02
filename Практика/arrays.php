@@ -15,6 +15,29 @@ var_dump($numbers);//только для отладки
 <h2>Перебор массива</h2>
 <?php
 for($i=0;$i<count($numbers);$i++){
-echo $numbers[$i];
+    echo $numbers[$i] , ' ';
+}
+?>
+<h2>Элементы массива</h2>
+<?php
+    echo $numbers[0];//первый элемент
+    $numbers[2]= '  $$$  ';
+    echo $numbers[2];
+?>
+<h2>элементa добавление</h2>
+<?php
+$numbers[]=777;
+var_dump($numbers);
+?>
+<h2>Цикл foreach</h2>
+<?php
+foreach($numbers as $number){
+    echo $number, '';
+}
+?>
+<h2>ЦИКЛ FOREACH индексами</h2>
+<?php
+foreach($numbers as $key=> $value) {
+    echo "$key - $value <br>" ;
 }
 ?>
